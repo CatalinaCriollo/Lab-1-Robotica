@@ -25,6 +25,24 @@ La herramienta fue fabricada mediante impresión 3D, utilizando el modelo previa
 
 # Descripción de las funciones utilizadas
 
+En el desarrollo del laboratorio, se emplearon funciones de programación en RAPID para garantizar el la realización de las operaciones robóticas. Los principales movimientos utilizados fueron **MOVJ** (movimiento de articulación) y **MOVL** (movimiento lineal). 
+
+El MOVJ (MoveJ) permite al robot desplazarse entre puntos específicos mendiante trayectorias no lineales, de tal manera que se optimiza el tiempo de movimiento. Este comando se utilizó para llevar el robot desde la posición inicial (Home) hasta el punto de inicio de las trayectorias de trabajo y para retornar a Home al finalizar las tareas.
+
+El MOVL(MoveL) se utilizo para ejecutar desplazamientos precisos y continuos a lo largo de trayectorias definidas, como los trazos necesarios para dibujar el logo de GATO y las iniciales. Este movimiento aseguro que el marcador mantuviera contacto constante con la superficie de trabajo, garantizando un trazo uniforme.
+
+Además, se implementaron bucles para repetir secuencias de movimientos de manera eficiente y asegurar la continuidad de las tareas robóticas. Por ejemplo, un bucle iterativo permitió replicar patrones de movimiento en caso de errores o ajustes necesarios durante la ejecución.
+
+Se destaca que tambien se incorporo comandos para gestionar señales de entrada y salida, como activar la rutina de trabajo con una señal de inicio y encender una luz indicadora mientras el robot está en operación.
+
+Para la calibración de la herramienta se ...
+
+3. **Calibración:** Incluir procedimientos para calibrar la herramienta antes de cada ejecución, asegurando que las trayectorias sean precisas y adaptadas al workobject.
+
+4. **Cambio de herramientas:** Crear una rutina específica para mover el robot a una posición de mantenimiento que facilite la instalación o desinstalación de herramientas.
+
+
+
 # Código en RAPID
 
 # Vídeo Simulación
