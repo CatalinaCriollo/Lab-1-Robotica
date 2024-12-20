@@ -4,11 +4,11 @@ Integrantes: Catalina Criollo Castelblanco - Diego Fernando Malagón Saenz
 
 # Resumen
 
-Este informe presenta el desarrollo del Laboratorio No. 01 del curso de Robótica, enfocado en la programación y control de un robot ABB IRB 140. La práctica aborda la generación de trayectorias, diseño y calibración de herramientas, programación en RAPID y manejo de señales digitales, utilizando herramientas como RobotStudio. Dado que estas actividades permiten aplicar conceptos clave en la simulación de procesos industriales, como la decoración automatizada de tortas, el objetivo del laboratorio es simular la decoración de un pastel con el logo de ...
+Este informe presenta el desarrollo del Laboratorio No. 01 del curso de Robótica, enfocado en la programación y control de un robot ABB IRB 140. La práctica aborda la generación de trayectorias, diseño y calibración de herramientas, programación en RAPID y manejo de señales digitales, utilizando herramientas como RobotStudio. Dado que estas actividades permiten aplicar conceptos clave en la simulación de procesos industriales, como la decoración automatizada de tortas, el objetivo del laboratorio es simular la decoración de un pastel con el logo de una Estrella.
 
 # Descripción de la solución planteada
 
-El robot ABB IRB 140 fue programado para ejecutar movimientos precisos sobre la superficie de trabajo, siguiendo instrucciones predefinidas para dibujar el logo de GATO y las iniciales del equipo. Como primer paso, se diseñó una herramienta capaz de sujetar un marcador, garantizando estabilidad y funcionalidad durante la operación. Posteriormente, se modeló el workobject, estableciendo las características geométricas de la superficie de trabajo, incluyendo su inclinación y posición relativa.
+El robot ABB IRB 140 fue programado para ejecutar movimientos precisos sobre la superficie de trabajo, siguiendo instrucciones predefinidas para dibujar el logo de Estrella y las iniciales del equipo. Como primer paso, se diseñó una herramienta capaz de sujetar un marcador, garantizando estabilidad y funcionalidad durante la operación. Posteriormente, se modeló el workobject, estableciendo las características geométricas de la superficie de trabajo, incluyendo su inclinación y posición relativa.
 
 Las orientaciones y trayectorias del robot fueron cuidadosamente definidas utilizando el software RobotStudio y el lenguaje RAPID. Estas trayectorias aseguran la continuidad en los trazos, respetando restricciones de velocidad y zonas de tolerancia. 
 
@@ -29,7 +29,7 @@ En el desarrollo del laboratorio, se emplearon funciones de programación en RAP
 
 El MOVJ (MoveJ) permite al robot desplazarse entre puntos específicos mendiante trayectorias no lineales, de tal manera que se optimiza el tiempo de movimiento. Este comando se utilizó para llevar el robot desde la posición inicial (Home) hasta el punto de inicio de las trayectorias de trabajo y para retornar a Home al finalizar las tareas.
 
-El MOVL(MoveL) se utilizo para ejecutar desplazamientos precisos y continuos a lo largo de trayectorias definidas, como los trazos necesarios para dibujar el logo de GATO y las iniciales. Este movimiento aseguro que el marcador mantuviera contacto constante con la superficie de trabajo, garantizando un trazo uniforme.
+El MOVL(MoveL) se utilizo para ejecutar desplazamientos precisos y continuos a lo largo de trayectorias definidas, como los trazos necesarios para dibujar el logo de Estrella y las iniciales. Este movimiento aseguro que el marcador mantuviera contacto constante con la superficie de trabajo, garantizando un trazo uniforme.
 
 Además, se implementaron bucles para repetir secuencias de movimientos de manera eficiente y asegurar la continuidad de las tareas robóticas. Por ejemplo, un bucle iterativo permitió replicar patrones de movimiento en caso de errores o ajustes necesarios durante la ejecución.
 
