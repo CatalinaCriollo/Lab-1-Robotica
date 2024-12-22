@@ -27,8 +27,10 @@ Herramienta Impresa en 3D:
 
 # Diagrama de flujo de acciones del robot
 
+# Plano de planta de la ubicación de cada uno de los elementos
 
-
+Distancia del robot a la mesa es de 300 mm
+![](https://github.com/CatalinaCriollo/Lab-1-Robotica/blob/a05496c078de818083ccf8b257134248dfbf1b6e/Plano.png)
 
 # Descripción de las funciones utilizadas
 
