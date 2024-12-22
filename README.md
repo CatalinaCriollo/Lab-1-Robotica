@@ -12,6 +12,10 @@ El robot ABB IRB 140 fue programado para ejecutar movimientos precisos sobre la 
 
 Las orientaciones y trayectorias del robot fueron definidas utilizando el software RobotStudio y el lenguaje RAPID. Con estas trayectorias fue posible asegurar la continuidad en los trazos respetando las restricciones de velocidad.
 
+El resultado obtenido fue:
+
+![Resultado](https://github.com/user-attachments/assets/0055ff3a-c92f-4ad9-888a-7124ba49f832)
+
 # Diseño de la herramienta
 
 El diseño de la herramienta se basó en requerimientos específicos, como el tamaño del marcador y la geometría del plato del manipulador IRB-140. Para su desarrollo, se utilizó software CAD para modelar en 3D la herramienta, asegurando un ajuste adecuado al marcador con un margen adicional para garantizar su funcionalidad.
@@ -27,9 +31,15 @@ Herramienta Impresa en 3D:
 
 # Diagrama de flujo de acciones del robot
 
+Ahorita corrijo esto
+
+![diagrama_flujo_robot_corregido](https://github.com/user-attachments/assets/a9ba8dc7-40f7-41e4-934d-29fc70e7ecd3)
+
+
 # Plano de planta de la ubicación de cada uno de los elementos
 
-Distancia del robot a la mesa es de 300 mm
+El robot ABB IRB 140 se encuentra posicionado frente a la superficie de trabajo con una distancia aproximada de 300 mm desde su base al borde de la mesa. El robot está ubicado de manera centralizada respecto a la mesa, permitiendo un alcance óptimo para realizar las tareas programadas. El plano en el que trabaja esta inclinado 30°.
+
 ![](https://github.com/CatalinaCriollo/Lab-1-Robotica/blob/a05496c078de818083ccf8b257134248dfbf1b6e/Plano.png)
 
 # Descripción de las funciones utilizadas
