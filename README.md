@@ -14,11 +14,16 @@ Las orientaciones y trayectorias del robot fueron cuidadosamente definidas utili
 
 # Diseño de la herramienta
 
-El diseño de la herramienta se basó en requerimientos específicos, como el tamaño del marcador, la geometría del plato del manipulador IRB-140 y la integración de un recorrido interno para el marcador, que mediante un resorte responde a fuerzas aplicadas durante la operación. Para su desarrollo, se utilizó software CAD para modelar en 3D la herramienta, asegurando un ajuste adecuado al marcador con un margen adicional para garantizar su funcionalidad.
+El diseño de la herramienta se basó en requerimientos específicos, como el tamaño del marcador y la geometría del plato del manipulador IRB-140. Para su desarrollo, se utilizó software CAD para modelar en 3D la herramienta, asegurando un ajuste adecuado al marcador con un margen adicional para garantizar su funcionalidad.
 
-La herramienta fue fabricada mediante impresión 3D, utilizando el modelo previamente diseñado. Este proceso permitió una rápida implementación y ajustes precisos en función de las especificaciones. Los archivos empleados para la impresión 3D se encuentran adjuntos como parte del informe.
+La herramienta fue fabricada mediante impresión 3D, utilizando el modelo previamente diseñado. Este proceso permitió una rápida implementación y ajustes precisos en función de las especificaciones. Los archivos empleados para la impresión 3D se encuentran adjuntos.
 
+Visualización de la herramienta:
 ![](https://github.com/CatalinaCriollo/Lab-1-Robotica/blob/e144e45669f19df76f8b95f1cc8341378924c9e6/Herramienta.png)
+
+Herramienta Impresa en 3D:
+![](https://github.com/CatalinaCriollo/Lab-1-Robotica/blob/72948781c26c7d7961540261a3f3e20e11702197/HerramientaF.jpg)
+
 
 # Diagrama de flujo de acciones del robot
 
@@ -37,7 +42,7 @@ Además, se implementaron bucles para repetir secuencias de movimientos de maner
 
 Se destaca que tambien se incorporo comandos para gestionar señales de entrada y salida, como activar la rutina de trabajo con una señal de inicio y encender una luz indicadora mientras el robot está en operación.
 
-Para la calibración de la herramienta se ...
+Para la calibración de la herramienta se tuvo en cuenta que La Herramienta sin tornillos pesaba 50 g, y el centro de masa me dio aproximado en 45 mm en Z desde el flanche y 0 en x y 0 en y. Para este procedimiento se creo un workobject
 
 3. **Calibración:** Incluir procedimientos para calibrar la herramienta antes de cada ejecución, asegurando que las trayectorias sean precisas y adaptadas al workobject.
 
