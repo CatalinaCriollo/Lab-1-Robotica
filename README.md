@@ -18,7 +18,7 @@ El diseño de la herramienta se basó en requerimientos específicos, como el ta
 
 La herramienta fue fabricada mediante impresión 3D, utilizando el modelo previamente diseñado. Este proceso permitió una rápida implementación y ajustes precisos en función de las especificaciones. Los archivos empleados para la impresión 3D se encuentran adjuntos como parte del informe.
 
-
+![](https://github.com/CatalinaCriollo/Lab-1-Robotica/blob/e144e45669f19df76f8b95f1cc8341378924c9e6/Herramienta.png)
 
 # Diagrama de flujo de acciones del robot
 
