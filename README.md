@@ -4,13 +4,13 @@ Integrantes: Catalina Criollo Castelblanco - Diego Fernando Malagón Saenz
 
 # Resumen
 
-Este informe presenta el desarrollo del Laboratorio No. 01 del curso de Robótica, enfocado en la programación y control de un robot ABB IRB 140. La práctica aborda la generación de trayectorias, diseño y calibración de herramientas, programación en RAPID y manejo de señales digitales, utilizando herramientas como RobotStudio. Dado que estas actividades permiten aplicar conceptos clave en la simulación de procesos industriales, como la decoración automatizada de tortas, el objetivo del laboratorio es simular la decoración de un pastel con el logo de una Estrella.
+El Laboratorio 1 del curso de Robótica esta enfocado en la programación y control de un robot ABB IRB 140. La práctica aborda la generación de trayectorias, diseño y calibración de herramientas, programación en RAPID y manejo de señales digitales, utilizando la herramienta RobotStudio. Dado que estas actividades permiten aplicar conceptos clave en la simulación de procesos industriales, como la decoración automatizada de tortas, el objetivo del laboratorio es simular la decoración de un pastel con el logo de una Estrella.
 
 # Descripción de la solución planteada
 
-El robot ABB IRB 140 fue programado para ejecutar movimientos precisos sobre la superficie de trabajo, siguiendo instrucciones predefinidas para dibujar el logo de Estrella y las iniciales del equipo. Como primer paso, se diseñó una herramienta capaz de sujetar un marcador, garantizando estabilidad y funcionalidad durante la operación. Posteriormente, se modeló el workobject, estableciendo las características geométricas de la superficie de trabajo, incluyendo su inclinación y posición relativa.
+El robot ABB IRB 140 fue programado para ejecutar movimientos precisos sobre la superficie de trabajo, siguiendo instrucciones predefinidas para dibujar el logo de Estrella y los nombres del equipo. Como primer paso, se diseñó una herramienta capaz de sujetar un marcador, garantizando estabilidad y funcionalidad durante la operación. Posteriormente, se modeló el workobject, estableciendo las características geométricas de la superficie de trabajo, incluyendo su inclinación y posición relativa.
 
-Las orientaciones y trayectorias del robot fueron cuidadosamente definidas utilizando el software RobotStudio y el lenguaje RAPID. Estas trayectorias aseguran la continuidad en los trazos, respetando restricciones de velocidad y zonas de tolerancia. 
+Las orientaciones y trayectorias del robot fueron definidas utilizando el software RobotStudio y el lenguaje RAPID. Con estas trayectorias fue posible asegurar la continuidad en los trazos respetando las restricciones de velocidad.
 
 # Diseño de la herramienta
 
@@ -34,22 +34,19 @@ Distancia del robot a la mesa es de 300 mm
 
 # Descripción de las funciones utilizadas
 
-En el desarrollo del laboratorio, se emplearon funciones de programación en RAPID para garantizar el la realización de las operaciones robóticas. Los principales movimientos utilizados fueron **MOVJ** (movimiento de articulación) y **MOVL** (movimiento lineal). 
+En la practica se emplearon diversas funciones en RAPID para garantizar la correcta ejecución de las tareas, entre las que se encuentran funciones están orientadas al control preciso del robot ABB IRB 140, utilizando movimientos lineales, señales digitales y la integración de datos de herramienta y workobject. 
 
-El MOVJ (MoveJ) permite al robot desplazarse entre puntos específicos mendiante trayectorias no lineales, de tal manera que se optimiza el tiempo de movimiento. Este comando se utilizó para llevar el robot desde la posición inicial (Home) hasta el punto de inicio de las trayectorias de trabajo y para retornar a Home al finalizar las tareas.
+1. Movimientos del robot
+- MoveL (Movimiento Lineal): Permite al robot desplazarse entre puntos específicos en una trayectoria recta, asegurando precisión y continuidad en las operaciones. Se utilizó principalmente para ejecutar los trazos requeridos en las trayectorias del laboratorio y los objetivos. Este movimiento fue ideal para las tareas donde el marcador debia mantener un contacto constante con la superficie de trabajo.
+- MoveJ (Movimiento de Articulación): Realiza movimientos rápidos entre puntos sin seguir trayectorias rectas. Se utilizó para llevar al robot a su posición inicial (Home) al inicio y al final de las rutinas, optimizando el tiempo en desplazamientos largos.
+  
+2. Gestión de señales digitales
+- WaitDI: Pausa la ejecución del programa hasta que se active una señal de entrada específica. Por ejemplo, WaitDI DI_01, 1 inicia la rutina de Path_10 y espera una señal para continuar.
+- set y reset: Estas funciones activan (set) y desactivan (reset) señales de salida digitales. En este laboratorio, se usaron para encender indicadores luminosos asociados con el estado de las rutinas (DO_01 y DO_02), proporcionando retroalimentación visual.
 
-El MOVL(MoveL) se utilizo para ejecutar desplazamientos precisos y continuos a lo largo de trayectorias definidas, como los trazos necesarios para dibujar el logo de Estrella y las iniciales. Este movimiento aseguro que el marcador mantuviera contacto constante con la superficie de trabajo, garantizando un trazo uniforme.
-
-Además, se implementaron bucles para repetir secuencias de movimientos de manera eficiente y asegurar la continuidad de las tareas robóticas. Por ejemplo, un bucle iterativo permitió replicar patrones de movimiento en caso de errores o ajustes necesarios durante la ejecución.
-
-Se destaca que tambien se incorporo comandos para gestionar señales de entrada y salida, como activar la rutina de trabajo con una señal de inicio y encender una luz indicadora mientras el robot está en operación.
-
-Para la calibración de la herramienta se tuvo en cuenta que La Herramienta sin tornillos pesaba 50 g, y el centro de masa me dio aproximado en 45 mm en Z desde el flanche y 0 en x y 0 en y. Para este procedimiento se creo un workobject
-
-3. **Calibración:** Incluir procedimientos para calibrar la herramienta antes de cada ejecución, asegurando que las trayectorias sean precisas y adaptadas al workobject.
-
-4. **Cambio de herramientas:** Crear una rutina específica para mover el robot a una posición de mantenimiento que facilite la instalación o desinstalación de herramientas.
-
+3. Datos de calibración
+   
+Se destaca que para garantizar la precisión de las operaciones del robot se realizo la calibración de la herramienta. En este caso, se consideró que la herramienta, sin tornillos, tiene un peso de 50 g, con un centro de masa ubicado aproximadamente a 45 mm en el eje Z desde el flanche, y 0 mm en los ejes X e Y. Esta información se utilizo para definir correctamente el parámetro ToolData en RAPID, lo que permitio al robot calcular las trayectorias de manera precisa y evitar errores durante la ejecución. Para esto, se creó un workobject, que define el espacio de trabajo, tomando como referencia el tablero donde se realizarán las operaciones. En este workobject se especificaron las dimensiones, inclinación y posición del tablero en relación con el robot.
 
 
 # Código en RAPID
