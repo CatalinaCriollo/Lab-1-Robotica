@@ -54,6 +54,14 @@ Para la calibración de la herramienta se tuvo en cuenta que La Herramienta sin 
 
 # Código en RAPID
 
+El módulo empleado para el desarrollo de la práctica se encuentra adjunto. Este fue implementado en RAPID, el lenguaje de programación utilizado en los robots ABB. El código desarrollado controla todas las acciones del robot, incluyendo tanto los movimientos del brazo robótico como el control preciso de la herramienta de dibujo. 
+
 # Vídeo Simulación
 
+En el siguiente enlace se encuentra el video de la simulación en RobotStudio de la práctica de laboratorio:
+https://youtu.be/xccmS5iWZto
+
 # Vídeo Implementación
+
+En el siguiente enlace se encuentra el video que evidencia la realización de la práctica de laboratorio:
+https://youtube.com/shorts/NJGZyf247zo?feature=share
