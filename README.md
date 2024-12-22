@@ -1,4 +1,4 @@
-# Laboratorio No. 01- Robótica Industrial- Trayectorias, Entradas y Salidas Digitales.
+# Laboratorio N°. 01- Robótica Industrial- Trayectorias, Entradas y Salidas Digitales.
 
 Integrantes: Catalina Criollo Castelblanco - Diego Fernando Malagón Saenz
 
@@ -31,9 +31,9 @@ Herramienta Impresa en 3D:
 
 # Diagrama de flujo de acciones del robot
 
-Ahorita corrijo esto
+A continuación, se presenta el diagrama de flujo de acciones del robot:
 
-![diagrama_flujo_robot_corregido](https://github.com/user-attachments/assets/a9ba8dc7-40f7-41e4-934d-29fc70e7ecd3)
+![Diagrama](https://github.com/user-attachments/assets/4890522b-4e4a-48f0-939f-548fe4c509ad)
 
 
 # Plano de planta de la ubicación de cada uno de los elementos
